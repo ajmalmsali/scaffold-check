@@ -1,0 +1,31 @@
+<h1>Listing restrooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numbered</th>
+      <th>Typ</th>
+      <th>Building</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restrooms.each do |restroom| %>
+      <tr>
+        <td><%= restroom.numbered %></td>
+        <td><%= restroom.typ %></td>
+        <td><%= restroom.building %></td>
+        <td><%= link_to 'Show', restroom %></td>
+        <td><%= link_to 'Edit', edit_restroom_path(restroom) %></td>
+        <td><%= link_to 'Destroy', restroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restroom', new_restroom_path %>

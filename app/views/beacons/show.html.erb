@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @beacon.identifier %>
+</p>
+
+<p>
+  <strong>Prox min:</strong>
+  <%= @beacon.prox_min %>
+</p>
+
+<p>
+  <strong>Prox max:</strong>
+  <%= @beacon.prox_max %>
+</p>
+
+<p>
+  <strong>Prox med:</strong>
+  <%= @beacon.prox_med %>
+</p>
+
+<p>
+  <strong>Building:</strong>
+  <%= @beacon.building %>
+</p>
+
+<%= link_to 'Edit', edit_beacon_path(@beacon) %> |
+<%= link_to 'Back', beacons_path %>
